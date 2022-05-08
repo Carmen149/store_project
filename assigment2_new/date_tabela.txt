@@ -1,0 +1,140 @@
+{   "firstName": "Talpos",
+"lastName": "Andreea",
+        "userName": "andreea_12",
+        "password": "Amso1414@",
+        "email": "andreea_talpos@gmail.com",
+        "country": "Romania",
+        "city": "Cluj",
+        "street": "Bucuriei",
+        "number": 23,
+        "phone": "0764528057",
+        "myFavoriteList": []
+    }  
+{
+      
+        "firstName": "Bontea",
+        "lastName": "Carmen",
+        "userName": "carmen_14",
+        "password": "Mere114@",
+        "email": "bontea_carmen@yahoo.com",
+        "country": "Romania",
+        "city": "Bucuresti",
+        "street": "Armoniei",
+        "number": 1,
+        "phone": "0764528057",
+        "myFavoriteList": []
+        
+    }
+    {
+        "firstName": "Pop",
+        "lastName": "Crina",
+        "userName": "crina_13",
+        "password": "Capsuni13!",
+        "email": "pop_crina@yahoo.com",
+        "country": "Italia",
+        "city": "Roma",
+        "street": "Pizza",
+        "number": 9,
+        "phone": "0764528057",
+        "myFavoriteList": []
+    }
+    {
+        "firstName": "Bolba",
+        "lastName": "Denisa",
+        "userName": "denisa_28",
+        "password": "Rosii123#",
+        "email": "bolba_denisa@yahoo.com",
+        "country": "America",
+        "city": "New York",
+        "street": "Liberty",
+        "number": 43,
+        "phone": "0764528057",
+        "myFavoriteList": []
+    }
+
+
+
+
+
+{
+        "id": 6,
+        "name": "Charm din argint Elegant Crown",
+        "price": 100.0,
+        "description": "Charm-urile sunt acele bijuterii pe care le colectăm, care reflectă cine suntem, prin ce am trecut, cum ne simțim, ce ne-a marcat și încotro ne îndreptăm, asemeni unui jurnal care leagă trecutul de prezentul și viitorul nostru.",
+        "material": "argint",
+        "availability": true,
+        "size": null,
+        "type": "CHARM",
+        "client": null,
+        "order": null
+    },
+    {
+        "id": 9,
+        "name": "Lantisor din argint Butterfly Vibes",
+        "price": 170.0,
+        "description": "Iti doresti sa-ti fluidizezi tinuta? Sa o faci suava si diafana? Atunci accesorizeaz-o cu „Butterfly Vibes„ si vei obtine un efect ”wow”. Colierul face din orice vestimentatie una tinereasca si în tendinte. Elementele multiple in forma de fluturasi te trimit intr-o lume de poveste in care orice rochie, bluza sau trench sunt potrivite accesoriului ”Butterfly Vibes”.",
+        "material": "argint",
+        "availability": true,
+        "size": null,
+        "type": "NECKLACE",
+        "client": null,
+        "order": null
+    },
+    {
+        "id": 10,
+        "name": "Bratara din argint Mojito",
+        "price": 139.0,
+        "description": "Ideale pentru o fire romantica, iti ofera plusul de rafinament pe care ti-l doresti. Caldura cromatica va fi o incantare vizuala de fiecare data cand vei fi privita, pe cand eleganta acesteia te va face sa te intorci mereu la ea.",
+        "material": "argint",
+        "availability": true,
+        "size": null,
+        "type": "BRACELET",
+        "client": null,
+        "order": null
+    },
+    {
+        "id": 11,
+        "name": "Cercei din argint Little Wings",
+        "price": 129.0,
+        "description": "Daca nu ai in colectie o pereche de cercei Little Wings atunci nu mai sta pe ganduri. Iti iei de-o grija pentru multe evenimente speciale de acum incolo intrucat cerceii se potrivesc tinutelor deosebite, indiferent ce ar insemna asta pentru tine. Cerceii din argint Little Wings sunt acel tip de accesorii carora nu ai ce sa le adaugi sau ce sa schimbi la ei. Sunt perfecti!",
+        "material": "argint",
+        "availability": true,
+        "size": null,
+        "type": "EARRINGS",
+        "client": null,
+        "order": null
+    },
+    {
+        "id": 12,
+        "name": "Inel reglabil din argint Freedom",
+        "price": 129.0,
+        "description": "Feminitate si rafinament sunt cele doua cuvinte care caracterizeaza inelul Freedom, dar sunt si starile cu care te vei alinia indata ce alegi sa-ti accesorizezi tinuta cu aceasta bijuterie. Stilul suav, delicat, cat si nota de libertate care reiese din forma inelului vor face sa fii remarcata in orice imprejurare. In functie de stilul personal poti sa asociezi cu o multitudine de tinute acest accesoriu si sa-l pui in evidenta in variate feluri. Iar el isi va indeplini discret misiunea de a te pune in valoare.",
+        "material": "argint",
+        "availability": true,
+        "size": null,
+        "type": "RING",
+        "client": null,
+        "order": null
+    }
+
+"firstName": "Bontea",
+    "lastName": "Diana",
+    "password": "admin_peste_toti",
+    "email": "bontea_diana@yahoo.com"
+
+  "availability": true,
+  "description": "Inelele din argint Charm, iti vor fi alaturi peste mari si tari si vor purta in ele cate o bucatica din tot ceea ce traiesti. Doar privind spre ele, iti vei aduce aminte de o prima intalnire, o zi de nastere, o nunta, Craciunul sau Ziua mamei.",
+  "material": "argint",
+  "name": "Inel guardian luna",
+  "price": 130,
+  "size": 5,
+  "type": "RING"
+
+ "idItem": 7,
+  "name": "Inel little lucky",
+  "price": 75,
+  "description": "Inelele din argint Charm, iti vor fi alaturi peste mari si tari si vor purta in ele cate o bucatica din tot ceea ce traiesti. Doar privind spre ele, iti vei aduce aminte de o prima intalnire, o zi de nastere, o nunta, Craciunul sau Ziua mamei.",
+  "material": "argint",
+  "availability": true,
+  "size": 5,
+  "type": "RING"

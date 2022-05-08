@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customer>
+    <email>andreea_talpos@gmail.com</email>
+    <firstName>Talpos</firstName>
+    <id>2</id>
+    <lastName>Andreea</lastName>
+    <password>Amso1414@</password>
+    <userName>andreea_12</userName>
+    <city>Cluj</city>
+    <country>Romania</country>
+    <myFavoriteList>
+        <availability>true</availability>
+        <description>Inelele din argint Charm, iti vor fi alaturi peste mari si tari si vor purta in ele cate o bucatica din tot ceea ce traiesti. Doar privind spre ele, iti vei aduce aminte de o prima intalnire, o zi de nastere, o nunta, Craciunul sau Ziua mamei.</description>
+        <idItem>6</idItem>
+        <material>argint</material>
+        <name>Inel guardian luna</name>
+        <price>130.0</price>
+        <size>5</size>
+        <type>RING</type>
+    </myFavoriteList>
+    <number>23</number>
+    <phone>0764528057</phone>
+    <street>Bucuriei</street>
+</customer>

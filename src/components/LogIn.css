@@ -1,0 +1,20 @@
+img{
+    max-width: 100%;
+
+}
+.main-container{
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    padding:5rem
+}
+.nav-items {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    width: 80vw;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+.border_style{
+    border-color: red;
+}

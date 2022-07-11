@@ -4,7 +4,7 @@ import ReorderIcon from '@mui/icons-material/Reorder';
 import { Navbar } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
 import AdminCrud from './AdminCrud';
-import '../customerCrud/AdminCrustomer.css'
+import './PageStyle.css'
 
 class CrudAdmin extends Component{
     constructor() {
@@ -18,21 +18,18 @@ class CrudAdmin extends Component{
     }
   render(){
       return (
-        <div className='AdminCrustomer'>
+        <div>
           <Navbar bg="" variant="dark"  >
-              {this.state.showMenu ? <div className='side'><Button  variant="secondary" active onClick={this.toggleMenu}><ReorderIcon/></Button></div> : <Button variant="light" onClick={this.toggleMenu}><ReorderIcon/></Button>}
+            {this.state.showMenu ? <div className='side'><Button  variant="secondary" active onClick={this.toggleMenu}><ReorderIcon/></Button></div> : <Button variant="light" onClick={this.toggleMenu}><ReorderIcon/></Button>}
           </Navbar>
-              <div>
-                 {this.state.showMenu ?
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 340px 1fr)",}}>
-                    <Sidebar/> 
-                    <AdminCrud/>
-                  </div> :
-                     <AdminCrud/>
-  
-                  }
+
+            <div>
+              {this.state.showMenu &&  <Sidebar/>}
+              <div className={this.state.showMenu? "shift-right":""}>
+                <AdminCrud/>
               </div>
-              
+            </div>
+            
         </div>
       )
     }

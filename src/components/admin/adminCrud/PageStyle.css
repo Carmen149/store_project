@@ -1,0 +1,16 @@
+.shift-right{
+ margin-left: 250px;
+ position: static;
+}
+.side{
+    width: 250px;
+    background-color: #2c3034;
+    position: fixed;
+    top:0px;
+    height: 60px;
+}
+.side #active{
+    background-color:black;
+}
+
+

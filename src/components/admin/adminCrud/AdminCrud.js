@@ -53,21 +53,18 @@ class AdminCrud extends Component{
     handleCloseGet = (e) =>{this.setState({showGet:false});  }
     handleClose = (e) =>{this.setState({show:false});  this.componentDidMount();}
     componentDidMount() {
-        axiosInstance
-            .get(
-                "api/admin",
-            )
-            .then(res => {
-                const val = res.data;
-                this.setState({
-                    admins: val
-                });
-                //console.log(val);
-                console.log(this.state.admins);
-            })
-            .catch(error => {
-                console.log(error);
+        axiosInstance.get("api/admin",)
+        .then(res => {
+            const val = res.data;
+            this.setState({
+                admins: val
             });
+            //console.log(val);
+            console.log(this.state.admins);
+        })
+        .catch(error => {
+            console.log(error);
+        });
     }
     inputChange=(e)=>{
         this.setState({
@@ -81,38 +78,27 @@ class AdminCrud extends Component{
             
         })
         console.log(e.target.id);
-
-       // console.log(e.target.id);
-       // console.log(e.target.value);
-        //console.log(this.state.firstname, this.state.lastname, this.state.username, this.state.password, this.state.email,
-           // this.state.country,this.state.city, this.state.number, this.state.street, this.state.phone);
     }
     getAdmin=(id)=>{
         console.log(id);
-        axiosInstance
-            .get(
-                "api/admin/"+id
-            ).then(res => {
-                let val = res.data;
-                console.log(val);
-               this.setState({
-                admin:val,
-                showGet:true
-               })
-            })
-            .catch(error => {
-                console.log(error);
-            });
-     
-    }
-    delete=(id)=>{
-        axiosInstance
-        .delete(
-           "api/admin/"+id
-        ).then(res => {
+        axiosInstance.get("api/admin/"+id).
+        then(res => {
             let val = res.data;
             console.log(val);
-          
+            this.setState({
+            admin:val,
+            showGet:true
+            })
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
+    delete=(id)=>{
+        axiosInstance.delete("api/admin/"+id)
+        .then(res => {
+            let val = res.data;
+            console.log(val); 
         })
         .catch(error => {
             console.log(error);
@@ -133,18 +119,17 @@ class AdminCrud extends Component{
             "userName": this.state.userName,
             "password": this.state.password,
             "email": this.state.email
-        
         })
         .then(data => {this.setState( {admins:[data.data, ...this.state.admins]} );
-                       console.log(data);
-                       console.log(data.data);})
+            console.log(data);
+            console.log(data.data);})
         .catch(err => this.setState( {errorHolder:err.response.data} ))
     }
   
     render(){
         return(
        <>
-         <div className="app-container " >
+         <div className="app-container" >
             <h1  className="text-center">Crud Operations admin</h1> 
             <br></br>
             <p style={{color:"red"}} id="errorHolder" >{this.state.errorHolder} </p>
@@ -171,71 +156,61 @@ class AdminCrud extends Component{
                    
                         <td> <Button size='sm' variant="success" style={{width: "165px"}} onClick={this.handleSumbit}>Add </Button> </td>
                     </tr>
-                   
-                 
                 </thead>
+
                 <tbody>
                 {this.state.admins.map((admin,i)=>(
-                        <tr className='admin'  key={i}>
-                            <td>{admin.id}</td>
-                            <td>{admin.firstName}</td>
-                            <td>{admin.lastName}</td>
-                            <td>{admin.userName}</td>
-                            <td>{admin.password}</td>
-                            <td>{admin.email}</td>
-                            <td  >
-                           
-                            <Button size='sm' variant='primary' onClick={()=>{this.handleShow(admin.id)}} data-toggle="modal">Edit</Button>{' | '}
-                            
-                            <Button size='sm' variant='danger' onClick={()=>{this.delete(admin.id)}} >Delete </Button>{' | '}
-                            <Button size="sm" variant="warning" onClick={()=>{this.getAdmin(admin.id)}} data-toggle="modal">Get</Button>
-
-                            </td>
-                        </tr>
+                    <tr className='admin'  key={i}>
+                        <td>{admin.id}</td>
+                        <td>{admin.firstName}</td>
+                        <td>{admin.lastName}</td>
+                        <td>{admin.userName}</td>
+                        <td>{admin.password}</td>
+                        <td>{admin.email}</td>
+                        <td >
+                        <Button size='sm' variant='primary' onClick={()=>{this.handleShow(admin.id)}} data-toggle="modal">Edit</Button>{' | '}
+                        <Button size='sm' variant='danger' onClick={()=>{this.delete(admin.id)}} >Delete </Button>{' | '}
+                        <Button size="sm" variant="warning" onClick={()=>{this.getAdmin(admin.id)}} data-toggle="modal">Get</Button>
+                        </td>
+                    </tr>
                    
                 ))}
                 </tbody>
-               
-               
             </Table>
             </div>
-            
-          
         </div>
+
         <Modal show={this.state.show} onHide={this.handleClose}>
-        <Modal.Header closeButton>
-            <Modal.Title>
-                Edit admin 
-            </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-            <EditFormAdmin admin={this.state.admin} />
-        </Modal.Body>
-        <Modal.Footer>
+            <Modal.Header closeButton>
+                <Modal.Title>
+                    Edit admin 
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <EditFormAdmin admin={this.state.admin}/>
+            </Modal.Body>
+            <Modal.Footer>
                 <Button variant="secondary" onClick={this.handleClose}>
                     Close Button
                 </Button>
-        </Modal.Footer>
-    </Modal>
+            </Modal.Footer>
+        </Modal>
     
-    <Modal show={this.state.showGet} onHide={this.handleCloseGet}>
-         <Modal.Header closeButton>
+        <Modal show={this.state.showGet} onHide={this.handleCloseGet}>
+            <Modal.Header closeButton>
                 <Modal.Title>Get admin by Id</Modal.Title>
-         </Modal.Header>
+            </Modal.Header>
 
             <Modal.Body>
-               <GetAdmin newAdmin={this.state.admin}> </GetAdmin>
+            <GetAdmin newAdmin={this.state.admin}> </GetAdmin>
             </Modal.Body>
 
             <Modal.Footer>
                 <Button variant="secondary" onClick={this.handleCloseGet}>Close</Button>
             </Modal.Footer>
-    </Modal>
-
-
+        </Modal>
     </>
-        )
-    }
+    )}
 }
 
 export default AdminCrud;

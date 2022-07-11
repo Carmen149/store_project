@@ -6,18 +6,21 @@ import axiosInstance from "../../../axios";
 const EditFormItem = ({item}) =>{
     const idItem = item.idItem;
     const [name, setName] = useState(item.name);
-    const [price, setPrice] = useState(item.price);
+    const [priceItem, setPrice] = useState(item.price);
     const [description, setDescription] = useState(item.description);
     const [material, setMaterial] = useState(item.material);
     const [availability, setAvailability] = useState(item.availability);
     const [size, setSize] = useState(item.size);
     const [type, setType] = useState(item.type);
-    
+    const [error, setError] =useState({});
+    const [button, setButton]=useState(false);
   
-
-    const updatedItem = {idItem, name, price, description,material,availability,size,type}
+    const updatedItem = {idItem, name, priceItem, description,material,availability,size,type}
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(updatedItem.size==null){
+            setSize('-')
+        }
         console.log(updatedItem);
         let credentilas={
             idItem:idItem,
@@ -33,105 +36,121 @@ const EditFormItem = ({item}) =>{
         axiosInstance.put("api/items", credentilas)
         .then(
            res => {
-                // const val = res.data;
-                console.log("Success");
-                //localStorage.setItem("USER_ID", res.data.id);
-               // history.push("/log-in");
-               // window.location.reload();
+            console.log("Success");
             }
         )
         .catch(error=>{
             console.log(error)
         })
-        // console.log("aici");
-        // console.log(id);
-        // console.log(updateditem);
-
-       
     }
+    const setFieldName=(event)=>{
+        const name=event.target.value
+        console.log(name)
+        setName(name);
+        const regex=/^([a-zA-Z]{3,}[ '-]?([a-zA-Z][ -])?)*$/
+        if(name.length<3){
+            setError({
+                ...error,name:"Name is to short. Name should contain at least 3 characters"
+            })
+            setButton({
+                button:true
+            })
+        }
+        else if(name.match(regex)==null){
+            setError({
+            ...error,name:"Name should contains characters"
+           })
+           setButton({
+            button:true
+           })
+        }
+        else{
+            setError({
+                ...error,name:""
 
-     return (
+            })
+            setButton({
+                button:false
+            })
+        }
+   }
+   const setFieldMaterial=(event)=>{
+        const material=event.target.value
+        if((material.valueOf()=='aur') || (material.valueOf()=='argint') || (material.valueOf()=='aur roz') || (material.valueOf()=='argint placat cu rodiu') || (material.valueOf()=='otel inoxidabil') || (material.valueOf()=='argint placat cu aur roz')){
+            setError({
+                ...error, material:""
+
+            })
+            setButton(false)
+        }
+        else{
+            setError({
+                ...error,material:"Material should be aur, argint , aur roz, argint placat cu rodiu, otel inoxidabil, argint placat cu aur roz"
+            })
+            setButton(true)
+        }
+   }
+    const setFieldType=(event)=>{
+        const type=event.target.value
+        console.log(type)
+        setType(type);
+        if((type.valueOf()=='RING') || (type.valueOf()=='BRACELET') || (type.valueOf()=='NECKLACE') || (type.valueOf()=='CHARM') || (type.valueOf()=='EARRINGS')){
+            setError({
+                ...error,type:""
+            })
+            setButton(false)
+        }
+        else{
+           
+            setError({
+                ...error,type:"Type should be RING, BRACELET, NECKLACE, CHARM, EARRING"
+            })
+            setButton(true)
+        }
+  }
+ 
+   return (
 
         <Form onSubmit={handleSubmit}>
-            <Form.Group>
-                <Form.Control
-                    type="text"
-                    placeholder="Name *"
-                    name="name"
-                    value={name}
-                    onChange={(e)=> { setName(e.target.value)}}
-                   
-                />
+            <Form.Group onChange={setFieldName}>
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Name *" name="name" defaultValue={name} required/>
+                {error.name && <p style={{color:'red'}}> {error.name}</p>}
             </Form.Group>
             <br></br>
-            <Form.Group>
-                <Form.Control
-                    type="double"
-                    placeholder="Price *"
-                    name="price"
-                    value={price}
-                    onChange={(e)=> { setPrice(e.target.value)}}
-                    
-                />
+            <Form.Group onChange={(e)=>{setPrice(e.target.value)}}>
+                <Form.Label>Price</Form.Label>
+                <Form.Control type="number"  step='0.01' placeholder="Price *" name="price"  defaultValue={priceItem} required/>
             </Form.Group>
             <br></br>
-            <Form.Group>
-                <Form.Control
-                    type="text-area"
-                    rows={5}
-                    placeholder="Description *"
-                    name="description"
-                    value={description}
-                    onChange={(e)=> { setDescription(e.target.value)}}
-                />
-                
+            <Form.Group onChange={setDescription}>
+                <Form.Label>Description</Form.Label>
+                <Form.Control type="text-area" rows={5}  placeholder="Description *" name="description" defaultValue={description} required/>
             </Form.Group>
             <br></br>
-            <Form.Group>
-                <Form.Control
-                    type="text"
-                    placeholder="Material *"
-                    name="material"
-                    value={material}
-                    onChange={(e)=> { setMaterial(e.target.value)}}
-                   
-                  
-                />
+            <Form.Group onChange={setFieldMaterial}>
+                <Form.Label>Material</Form.Label>
+                <Form.Control type="text" placeholder="Material *" name="material" defaultValue={material} required/>
+                {error.material && <p style={{color:'red'}}> {error.material}</p>}
             </Form.Group>
             <br></br>
-            <Form.Group>
-                <Form.Control
-                    type="boolean"
-                    placeholder="Availability *"
-                    name="availability"
-                    value={availability}
-                    onChange={(e)=> { setAvailability(e.target.value)}}
-                    
-                  
-                />
+            <Form.Group onChange={setAvailability}>
+                <Form.Label>Availability</Form.Label>
+                <Form.Control type="boolean" placeholder="Availability *" name="availability" defaultValue={availability} required/>
             </Form.Group>
             <br></br>
-            <Form.Group>
-                <Form.Control
-                    type="text"
-                    placeholder="Size *"
-                    name="size"
-                    value={size}
-                    onChange={(e)=> { setSize(e.target.value)}}
-                />
+            <Form.Group onChange={setSize}>
+                <Form.Label>Size</Form.Label>
+                <Form.Control type="text" placeholder="Size *" name="size" defaulvalue={size}/>
             </Form.Group>
             <br></br>
-            <Form.Group>
-                <Form.Control
-                    type="text"
-                    placeholder="Type *"
-                    name="type"
-                    value={type}
-                    onChange={(e)=> { setType(e.target.value)}}
-                />
+            <Form.Group onChange={setFieldType}>
+                <Form.Label>Type</Form.Label>
+                <Form.Control type="text" placeholder="Type *" name="type" defaultValue={type} required/>
+                {error.type && <p style={{color:'red'}}> {error.type}</p>}
             </Form.Group>
             <br></br>
-            <Button variant="success" type="submit" >
+            <Button variant="success" disabled={button} type="submit" onChange={setButton} >
                 Edit item
             </Button>
         </Form>

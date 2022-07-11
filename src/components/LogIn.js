@@ -3,9 +3,11 @@ import React from 'react';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import axiosInstance from '../axios';
 import history from '../history';
-
-
-
+import '../images/background.jpg'
+import '../components/LogIn.css'
+import {HiUserCircle} from 'react-icons/hi'
+import {ImUser} from 'react-icons/im'
+const background= new URL('../images/background.jpg',import.meta.url)
 
 class LogIn extends React.Component {
     constructor() {
@@ -23,7 +25,6 @@ class LogIn extends React.Component {
         this.setState({
             [name]: value
         });
-    //    console.log(value);
 
     };
     handleChangeSelect=(e)=> {    this.setState(  { role: e.target.value});
@@ -40,10 +41,9 @@ class LogIn extends React.Component {
 
         }
          if(credentilas.role==="Admin"){
-            axiosInstance.post("api/admin/login", credentilas)
+            axiosInstance.put("api/admin/login", credentilas)
             .then(
                res => {
-                    // const val = res.data;
                     console.log("Success");
                     localStorage.setItem("USER_ID", res.data.id);
                     history.push("/administration");
@@ -55,13 +55,12 @@ class LogIn extends React.Component {
             })
          }
          if(credentilas.role==="Customer"){
-            axiosInstance.post("api/customers/login", credentilas)
+            axiosInstance.put("api/customers/logIn", credentilas)
             .then(
                res => {
-                    // const val = res.data;
                     console.log("Success");
                     localStorage.setItem("USER_ID", res.data.id);
-                    history.push("/customer");
+                    history.push("/ring");
                     window.location.reload();
                 }
             )
@@ -80,11 +79,12 @@ class LogIn extends React.Component {
     render() {
         return (
             <>
-                <Container>
-                    <h1 className="shadow-sm text mt-5 p-3 text-center rounded">Login</h1>
-                    <Row className="mt-5">
-                        <Col lg={5} md={6} sm={12} className="p-5 m-auto shadow-sm rounded-lg">
-                            <Form onSubmit={this.onSubmitFun.bind(this)} >
+            
+                <div className='main-container'>
+                    <Row className="mt-5" >
+                        <Col lg={5} md={6} sm={12} className="p-5 m-auto shadow-sm rounded-sm" style={{backgroundColor:'white', borderRadius:'20px'}}>
+                            <Form style={{backgroundColor:'white'}} onSubmit={this.onSubmitFun.bind(this)} >
+                                <h1 className='text-center' style={{ fontSize:'7rem'}}>{<HiUserCircle/>}</h1>
                                 <Form.Group controlId="username" onChange={this.handleInput}>
                                     <Form.Label>Username</Form.Label>
                                     <Form.Control type="username"  placeholder="Username" name="username" />
@@ -120,7 +120,7 @@ class LogIn extends React.Component {
                         </Col>
                     </Row>
                    
-                </Container>
+                </div>
             </>
         );
     }

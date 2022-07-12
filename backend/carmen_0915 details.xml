@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customer>
+    <email>bontea_carmen@yahoo.com</email>
+    <firstName>Carmen</firstName>
+    <id>37</id>
+    <lastName>Diana</lastName>
+    <password>Were1234@</password>
+    <userName>carmen_0915</userName>
+    <city>Zalau</city>
+    <country>Romania</country>
+    <number>13</number>
+    <phone>0755865280</phone>
+    <street>Galaxiei</street>
+</customer>

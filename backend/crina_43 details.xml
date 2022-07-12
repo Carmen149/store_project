@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customer>
+    <email>pop_crina@yahoo.com</email>
+    <firstName>Pop</firstName>
+    <id>73</id>
+    <lastName>Crina</lastName>
+    <password>Capsuni13!</password>
+    <userName>crina_43</userName>
+    <city>Roma</city>
+    <country>Italia</country>
+    <myFavoriteList>
+        <availability>true</availability>
+        <description>Simbolizand sentimentul de protectie prin elemente astrale, design-ul acestui colier imbina mai multe semnificatii in una: de la infinit si pana la siguranta; va fi cu certitudine remarcat la gatul oricarei purtatoare. Produsul vine insotit de certificat de garantie, valabil 1 an de la data achizitiei. De asemenea, veti primi gratuit si cutiuta de cadou premium in care produsul dumneavoastra va fi ambalat cu multa grija.</description>
+        <idItem>42</idItem>
+        <material>argint</material>
+        <name>Colier Moon</name>
+        <nameImg>lant2</nameImg>
+        <price>120.0</price>
+        <type>NECKLACE</type>
+    </myFavoriteList>
+    <myFavoriteList>
+        <availability>true</availability>
+        <description>Iti doresti sa-ti fluidizezi tinuta? Sa o faci suava si diafana? Atunci accesorizeaz-o cu „Heart„ si vei obtine un efect ”wow”. Colierul face din orice vestimentatie una tinereasca si in tendinte. Eleganta colierului te trimite intr-o lume de poveste in care orice rochie, bluza sau trench sunt potrivite accesoriului ”Heart”.</description>
+        <idItem>2</idItem>
+        <material>argint placat cu rodiu</material>
+        <name>Colier Heart</name>
+        <nameImg>lant0</nameImg>
+        <price>145.0</price>
+        <type>NECKLACE</type>
+    </myFavoriteList>
+    <myFavoriteList>
+        <availability>true</availability>
+        <comList>
+            <com>mergem</com>
+            <customer>
+                <email>bontea_carmen@yahoo.com</email>
+                <firstName>Carmen</firstName>
+                <id>43</id>
+                <lastName>Diana</lastName>
+                <password>Amso1414@</password>
+                <userName>user12</userName>
+                <city>Zalau</city>
+                <country>Romania</country>
+                <myFavoriteList>
+                    <availability>true</availability>
+                    <description>Daca nu ai in colectie o pereche de cercei Little Wings atunci nu mai sta pe ganduri. Iti iei de-o grija pentru multe evenimente speciale de acum incolo intrucat cerceii se potrivesc tinutelor deosebite, indiferent ce ar insemna asta pentru tine. Cerceii din argint Little Wings sunt acel tip de accesorii carora nu ai ce sa le adaugi sau ce sa schimbi la ei. Sunt perfecti!Produsul vine insotit de certificat de garantie, valabil 1 an de la data achizitiei. De asemenea, veti primi gratuit si cutiuta de cadou premium in care produsul dumneavoastra va fi ambalat cu multa grija.</description>
+                    <idItem>4</idItem>
+                    <material>aur </material>
+                    <name>Cercei din  Little Wings</name>
+                    <nameImg>cercei0</nameImg>
+                    <price>65.0</price>
+                    <type>EARRINGS</type>
+                </myFavoriteList>
+                <myFavoriteList>
+                    <availability>true</availability>
+                    <description>Iti doresti sa-ti fluidizezi tinuta? Sa o faci suava si diafana? Atunci accesorizeaz-o cu „Heart„ si vei obtine un efect ”wow”. Colierul face din orice vestimentatie una tinereasca si in tendinte. Eleganta colierului te trimite intr-o lume de poveste in care orice rochie, bluza sau trench sunt potrivite accesoriului ”Heart”.</description>
+                    <idItem>2</idItem>
+                    <material>argint placat cu rodiu</material>
+                    <name>Colier Heart</name>
+                    <nameImg>lant0</nameImg>
+                    <price>145.0</price>
+                    <type>NECKLACE</type>
+                </myFavoriteList>
+                <number>13</number>
+                <phone>0755865280</phone>
+                <street>Galaxiei nr</street>
+            </customer>
+            <idComentariu>3</idComentariu>
+        </comList>
+        <comList>
+            <com>mergem</com>
+            <customer>
+                <email>pop_crina@yahoo.com</email>
+                <firstName>Pop</firstName>
+                <id>63</id>
+                <lastName>Crina</lastName>
+                <password>Capsuni13!</password>
+                <userName>crina_53</userName>
+                <city>Roma</city>
+                <country>Italia</country>
+                <number>9</number>
+                <phone>0764528057</phone>
+                <street>Pizza</street>
+            </customer>
+            <idComentariu>5</idComentariu>
+        </comList>
+        <comList>
+            <com>mergem</com>
+            <customer>
+                <email>bolba_denisa@yahoo.com</email>
+                <firstName>Bolba</firstName>
+                <id>207</id>
+                <lastName>Denisa</lastName>
+                <password>Rosii123#</password>
+                <userName>denisa_38</userName>
+                <city>New York</city>
+                <country>America</country>
+                <number>43</number>
+                <phone>0764528057</phone>
+                <street>Liberty</street>
+            </customer>
+            <idComentariu>6</idComentariu>
+        </comList>
+        <description>Finetea acestui colier iti va armoniza orice stare si intreaga vestimentatie. Elementul discret ii confera intregului accesoriu puterea de a fi piesa de rezistența atunci cand il porti. Piatra semipretioasa iti da voie sa-l porti atat ziua la orice intalnire pe care o ai, cat si seara in club sau la o petrecere intre prieteni. ”Karma” va avea grija sa fii o prezenta irezistibila.  Produsul vine insotit de certificat de garantie, valabil 1 an de la data achizitiei. De asemenea, veti primi gratuit si cutiuta de cadou premium in care produsul dumneavoastra va fi ambalat cu multa grija.</description>
+        <idItem>41</idItem>
+        <material>argint placat cu rodiu</material>
+        <name>Colier Karma</name>
+        <nameImg>lant1</nameImg>
+        <price>160.0</price>
+        <type>NECKLACE</type>
+    </myFavoriteList>
+    <number>9</number>
+    <phone>0764528057</phone>
+    <street>Pizza</street>
+</customer>

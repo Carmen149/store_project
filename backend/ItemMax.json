@@ -1,0 +1,19 @@
+[ {
+  "Type" : "RING",
+  "Price" : 75.0,
+  "Material" : "argint placat cu aur roz",
+  "Number of occurences" : 9,
+  "Name" : "Inel little lucky"
+}, {
+  "Type" : "BRACELET",
+  "Price" : 500.0,
+  "Material" : "aur",
+  "Number of occurences" : 1,
+  "Name" : "Bratara Heart"
+}, {
+  "Type" : "NECKLACE",
+  "Price" : 160.0,
+  "Material" : "argint placat cu rodiu",
+  "Number of occurences" : 2,
+  "Name" : "Colier Karma"
+} ]
